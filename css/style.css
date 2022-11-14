@@ -29,11 +29,6 @@
   box-sizing: border-box;
 }
 
-body {
-	/*background-image:url(../images/home.jpg);
-	background-position: top;*/
-}
-
 button, a {
 	cursor: pointer;
 }
