@@ -4,16 +4,16 @@ $('.menu').find('a:eq(0)').click(function(){
 $('.menu').find('a:eq(1)').click(function(){
 	$('body, html').animate({ scrollTop: $('.page2').offset().top }, 500);
 });
-$('.menu').find('a:eq(3)').click(function(){
+$('.menu').find('a:eq(2)').click(function(){
 	$('body, html').animate({ scrollTop: $('.page4').offset().top }, 500);
 });
-$('.menu').find('a:eq(4)').click(function(){
+$('.menu').find('a:eq(3)').click(function(){
 	$('body, html').animate({ scrollTop: $('.page6').offset().top }, 500);
 });
-$('.menu').find('a:eq(5)').click(function(){
+$('.menu').find('a:eq(4)').click(function(){
 	$('body, html').animate({ scrollTop: $('.page7').offset().top }, 500);
 });
-$('.menu').find('a:eq(6)').click(function(){
+$('.menu').find('a:eq(5)').click(function(){
 	$('body, html').animate({ scrollTop: $('.page8').offset().top }, 500);
 });
 
