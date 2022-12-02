@@ -94,38 +94,66 @@ button {
 
 /* Слайдеры для мобильной версии */
 
-.slider {
-	display: none;
-    align-items: center;
+@media (width >= 1300px) {
+	.slider {
+		display: block;
+    	align-items: center;
+	    width: 679px;
+    	height: 472px;
+    	position: absolute;
+	    left: 45%;
+    	margin-top: -260px;
+	}
 }
 
 .slider img {
 	z-index: 2;
+	width: 100%;
+	height: 100%;
 }
 
-.slider .arrows {
+.slider .pager {
 	display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: absolute;
-    width: 340px;
-    column-gap: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 205px;
+    column-gap: 30px;
     justify-items: center;
     z-index: 3;
+    align-items: center;
+    margin-left: -490px;
+    padding-top: 40px;
 }
 
-.slider .arrows .prev, .slider .arrows .next {
-    width: 36px;
-    height: 36px;
-    border-radius: 36px;
-    background: #E3B873;
-	background-image: url('../images/Vector (Stroke).svg');
+.slider .pager .prev, .slider .pager .next {
+    width: 40px;
+    height: 15px;
+	background-image: url('../images/prev.svg');
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	cursor: pointer;
 }
 
-.slider .arrows .next {
+.slider .pager .next {
 	transform: rotate(180deg);
+}
+
+.slider .pager .dots {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+.slider .pager .pager_dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 30px;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.slider .pager .pager_dot.active {
+	background: rgba(255, 255, 255);	
 }
 
 
@@ -291,14 +319,9 @@ button {
     align-content: center;
 }
 
-.page2 .content .pager {
-    padding-top: 40px;
-}
-
 .page2 .content .right_part {
     display: grid;
     justify-content: end;
-    padding-top: 100px;
 }
 
 .page2 .content p {
@@ -324,7 +347,7 @@ button {
 
 .page2 .content ul {
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 350px;
 }
 
 .page2 .content ul li {
@@ -1005,7 +1028,7 @@ button {
 		padding-top: 0px;
 	}
 
-	.page2 .content img {
+	.page2 .content .slider {
 		width: 340px;
 		height: 240px;
 	}
@@ -1014,8 +1037,35 @@ button {
 		display: none;
 	}
 
-	.page2 .content .left_part .pager {
+	.slider .pager {
+		display: grid;
+    	grid-template-columns: 1fr 1fr;
+	    position: absolute;
+    	width: 340px;
+	    column-gap: 200px;
+    	justify-items: center;
+	    z-index: 3;
+	    margin-left: 0px;
+	    padding-top: 100px;
+	}
+
+	.slider .pager .dots {
 		display: none;
+	}
+
+	.slider .pager .prev, .slider .pager .next {
+    	width: 36px;
+	    height: 36px;
+    	border-radius: 36px;
+	    background: #E3B873;
+		background-image: url('../images/Vector (Stroke).svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer;
+	}
+
+	.slider .pager .next {
+		transform: rotate(180deg);
 	}
 
 	.page2 .content .details {
